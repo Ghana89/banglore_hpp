@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>House Price Prediction model</title>
+
+    </head>
+
+    <body>
+        
+        <h1>Predicting House Price predict</h1>
+        <form action="pred" , method="post">
+            <label>Enter Size of Flat :</label><input type="text" name = "size"> <br><br>
+            <label for="locations">Select Location :</label>
+
+            <select id = 'locations' name='locations' required="1">
+                {% for loc in locations %}
+                    <option value="{{loc}}">{{loc}}</option>
+
+                {% endfor %}
+            </select> <br><br>
+            
+            <label for="area_type">Select Area Tyepe :</label>
+
+            <select id = "area_type" name="area_type" required="1">
+                {% for area in areas %}
+                    <option value="{{area}}">{{area}}</option>
+                {% endfor %}
+            </select>
+
+            
+            <label>Enter Total Sqft :</label><input type="text" name='total_sqft'> <br><br>
+            <label>Enter Total No of Bathroom :</label><input type="text" name='bath'> <br><br>
+            <input type="submit">{{result_app}}
+            
+
+        </form>
+        
+
+ 
+    </body>
+
+
+
+
+
+
+
+</html>
